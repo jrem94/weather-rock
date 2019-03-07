@@ -5,10 +5,12 @@ fetch(
 )
   .then(result => result.json())
   .then(data => {
-    console.log(data);
     p.innerHTML = concatWeather(data);
   })
-  .catch(err => console.log(err));
+  .catch(err => {
+    console.log(err);
+    p.innerHTML = "Something went wrong. Please try again later.";
+  });
 
 const concatWeather = data => {
   const todaysWeather = data.consolidated_weather[0];
@@ -19,5 +21,7 @@ const concatWeather = data => {
   const windspeed = parseInt(todaysWeather.wind_speed);
   const winddir = todaysWeather.wind_direction_compass;
 
-  return `Weather: ${weather} <br> High Temp: ${high} <br> Low Temp: ${low} <br> Wind Speed: ${windspeed} <br> Wind Direction: ${winddir} <br> Predictability: ${pred} `;
+  return `Weather: ${weather} <br> High Temp: ${(high * 9) / 5 +
+    32} &#8457; <br> Low Temp: ${(low * 9) / 5 +
+    32} &#8457; <br> Wind Speed: ${windspeed} <br> Wind Direction: ${winddir} <br> Predictability: ${pred} %`;
 };

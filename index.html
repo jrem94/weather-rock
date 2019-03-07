@@ -4,12 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>How's The Weather?</title>
+    <title>Weather Rock</title>
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <h1>How's the Weather?</h1>
-    <p id="weather">No weather found . . .</p>
+    <label for="location">Please enter your location:</label>
+    <input
+      type="text"
+      name="location"
+      placeholder="San Fransico, California"
+      disabled
+    />
+    <p id="weather">Loading weather . . .</p>
     <script src="./js/app.js"></script>
   </body>
 </html>
