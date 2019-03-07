@@ -9,14 +9,16 @@
   </head>
   <body>
     <h1>How's the Weather?</h1>
-    <label for="location">Please enter your location:</label>
+    <label for="location">Please enter your city:</label>
     <input
+      id="city"
       type="text"
       name="location"
-      placeholder="San Fransico, California"
-      disabled
+      placeholder="San Francisco"
+      value=""
     />
-    <p id="weather">Loading weather . . .</p>
+    <button id="search">Search</button>
+    <p id="weather">Please enter a major city to view the weather.</p>
     <script src="./js/app.js"></script>
   </body>
 </html>
