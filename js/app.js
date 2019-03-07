@@ -40,7 +40,7 @@ const concatWeather = data => {
     data.parent.title
   }</h3> <br> Weather: ${weather} <br> High Temp: ${(high * 9) / 5 +
     32} &#8457; <br> Low Temp: ${(low * 9) / 5 +
-    32} &#8457; <br> Wind Speed: ${windspeed} <br> Wind Direction: ${winddir} <br> Predictability: ${pred} %`;
+    32} &#8457; <br> Wind Speed: ${windspeed} mph<br> Wind Direction: ${winddir} <br> Predictability: ${pred} %`;
 };
 
 search.addEventListener("click", () => {
